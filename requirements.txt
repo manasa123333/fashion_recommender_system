@@ -1,0 +1,5 @@
+streamlit
+PIL
+tensorflow
+pickle
+scikit-learn
