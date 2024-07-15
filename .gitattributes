@@ -1,1 +1,2 @@
 *.pkl filter=lfs diff=lfs merge=lfs -text
+C:/Users/sanath/Desktop/github/fashion_recommender_system/embeddings2 filter=lfs diff=lfs merge=lfs -text
