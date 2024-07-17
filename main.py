@@ -9,6 +9,15 @@ from tensorflow.keras.preprocessing import image
 from tensorflow.keras.layers import GlobalMaxPooling2D
 from tensorflow.keras.applications.resnet50 import ResNet50, preprocess_input
 from sklearn.neighbors import NearestNeighbors
+try:
+    with open(filename, "rb") as f:
+        return f.read()
+except FileNotFoundError:
+    raise MediaFileStorageError(f"File '{filename}' not found.")
+except PermissionError:
+    raise MediaFileStorageError(f"Permission denied for '{filename}'.")
+except Exception as ex:
+    raise MediaFileStorageError(f"Error opening '{filename}': {ex}")
 
 feature_list = np.array(pickle.load(open('embeddings2.pkl', 'rb')))
 filenames = pickle.load(open('filenames2.pkl', 'rb'))
