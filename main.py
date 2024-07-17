@@ -22,9 +22,9 @@ def read_file(filename):
     except Exception as ex:
         raise MediaFileStorageError(f"Error opening '{filename}': {ex}")
 
-# Load embeddings and filenames
-feature_list = np.array(pickle.load(open('embeddings2.pkl', 'rb')))
-filenames = pickle.load(open('filenames2.pkl', 'rb'))
+feature_list = read_file('embeddings2.pkl')
+filenames = read_file('filenames2.pkl')
+
 
 # Initialize ResNet50 model
 model = ResNet50(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
