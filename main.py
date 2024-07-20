@@ -49,16 +49,19 @@ def recommend(features, feature_list):
     distances, indices = neighbors.kneighbors([features])
     return indices
 
-# Function to save uploaded file
 def save_uploaded_file(uploaded_file):
     try:
-        with open(os.path.join('/content/fashion_recommender_system/uploads', uploaded_file.name), 'wb') as f:
+        # Ensure 'uploads' directory exists
+        if not os.path.exists('uploads'):
+            os.makedirs('uploads')
+        
+        file_path = os.path.join('uploads', uploaded_file.name)
+        with open(file_path, 'wb') as f:
             f.write(uploaded_file.getbuffer())
-        return True
+        return file_path
     except Exception as e:
         st.error(f"Error: {e}")
-        return False
-
+        return None
 # Streamlit UI
 uploaded_file = st.file_uploader("Choose an image")
 
