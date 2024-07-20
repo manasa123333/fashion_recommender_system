@@ -12,18 +12,12 @@ from sklearn.neighbors import NearestNeighbors
 
 # Exception handling function for file reading
 def read_file(filename):
-    try:
-        with open(filename, "rb") as f:
-            return f.read()
-    except FileNotFoundError:
-        raise MediaFileStorageError(f"File '{filename}' not found.")
-    except PermissionError:
-        raise MediaFileStorageError(f"Permission denied for '{filename}'.")
-    except Exception as ex:
-        raise MediaFileStorageError(f"Error opening '{filename}': {ex}")
+    with open(filename, "rb") as f:
+      return f.read()
+    
 
-feature_list = read_file('embeddings2.pkl')
-filenames = read_file('filenames2.pkl')
+feature_list = read_file('/content/fashion_recommender_system/embeddings2.pkl')
+filenames = read_file('/content/fashion_recommender_system/filenames2.pkl')
 
 
 # Initialize ResNet50 model
@@ -69,10 +63,11 @@ def save_uploaded_file(uploaded_file):
 uploaded_file = st.file_uploader("Choose an image")
 
 if uploaded_file is not None:
-    if save_uploaded_file(uploaded_file):
-        display_image = Image.open(uploaded_file)
+    file_path = save_uploaded_file(uploaded_file)
+    if file_path is not None:
+        display_image = Image.open(file_path)
         st.image(display_image)
-        features = extract_features(os.path.join("uploads", uploaded_file.name), model)
+        features = extract_features(file_path, model)
         indices = recommend(features, feature_list)
         col1, col2, col3, col4, col5 = st.columns(5)
         with col1:
@@ -87,4 +82,3 @@ if uploaded_file is not None:
             st.image(filenames[indices[0][4]])
     else:
         st.header("Some error has occurred while uploading file")
-
