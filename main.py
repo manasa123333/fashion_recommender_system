@@ -52,7 +52,7 @@ def recommend(features, feature_list):
 # Function to save uploaded file
 def save_uploaded_file(uploaded_file):
     try:
-        with open(os.path.join('uploads', uploaded_file.name), 'wb') as f:
+        with open(os.path.join('/content/fashion_recommender_system/uploads', uploaded_file.name), 'wb') as f:
             f.write(uploaded_file.getbuffer())
         return True
     except Exception as e:
