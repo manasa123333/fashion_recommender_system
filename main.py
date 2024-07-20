@@ -13,12 +13,10 @@ from sklearn.neighbors import NearestNeighbors
 # Exception handling function for file reading
 def read_file(filename):
     with open(filename, "rb") as f:
-      return f.read()
-    
+        return pickle.load(f)
 
 feature_list = read_file('/content/fashion_recommender_system/embeddings2.pkl')
 filenames = read_file('/content/fashion_recommender_system/filenames2.pkl')
-
 
 # Initialize ResNet50 model
 model = ResNet50(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
@@ -49,6 +47,7 @@ def recommend(features, feature_list):
     distances, indices = neighbors.kneighbors([features])
     return indices
 
+# Function to save uploaded file
 def save_uploaded_file(uploaded_file):
     try:
         # Ensure 'uploads' directory exists
@@ -62,6 +61,7 @@ def save_uploaded_file(uploaded_file):
     except Exception as e:
         st.error(f"Error: {e}")
         return None
+
 # Streamlit UI
 uploaded_file = st.file_uploader("Choose an image")
 
