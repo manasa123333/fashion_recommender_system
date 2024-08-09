@@ -1,5 +1,5 @@
 # Introduction
-This project is a Fashion Recommender System built using machine learning techniques. It suggests fashion items to users based on their preferences and browsing history.
+This project is a Fashion Recommender System built using classic machine learning and deep learning techniques. It suggests fashion items to users based on their preferences and browsing history.
 
 # Features
 Personalized Recommendations: Offers tailored fashion recommendations.
@@ -13,4 +13,8 @@ Real-time Suggestions: Provides instant recommendations as users interact with t
 # Dataset
 Used Fashion Product Images Dataset by Param Aggarwal
 [Dataset Link](https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-dataset)
+
+
+
+
 
