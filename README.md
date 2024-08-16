@@ -45,7 +45,9 @@ The concept of Transfer Learning is employed to address the challenges posed by 
 
 # Installation
 Use pip to install the requirements.
-''' pip install -r requirements.txt '''
+''' 
+pip install -r requirements.txt
+'''
 
 
 
