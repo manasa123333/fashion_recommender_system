@@ -45,9 +45,28 @@ The concept of Transfer Learning is employed to address the challenges posed by 
 
 # Installation
 Use pip to install the requirements.
-''' 
-pip install -r requirements.txt
-'''
+```bash
+pip install -r requirements.txt 
+```
+
+# Built With/Dependencies
+1. OpenCV - Open Source Computer Vision and Machine Learning software library
+
+2. Tensorflow - TensorFlow is an end-to-end open-source platform for machine learning.
+
+3. Tqdm - tqdm is a Python library that allows you to output a smart progress bar by wrapping around any iterable.
+
+4. streamlit - Streamlit is an open-source app framework for Machine Learning and Data Science teams. Create beautiful data apps in hours, not weeks.
+
+5. pandas - pandas is a fast, powerful, flexible, and easy-to-use open-source data analysis and manipulation tool, built on top of the Python programming language.
+
+6. Pillow - PIL is the Python Imaging Library by Fredrik Lundh and Contributors.
+
+7. scikit-learn - Scikit-learn is a free software machine learning library for the Python programming language.
+
+8. OpenCV-python - OpenCV is a huge open-source library for computer vision, machine learning, and image processing.
+
+9. Hugging Face Spaces - Hugging Face Spaces offers a simple way to host ML demo apps directly on your profile or your organization's profile. This allows you to create your ML portfolio, showcase your projects at conferences or with stakeholders, and work collaboratively with other people in the ML ecosystem.
 
 
 
