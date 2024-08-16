@@ -18,6 +18,11 @@ Used Fashion Product Images Dataset by Param Aggarwal
 # How does this work
 ![fashion drawio](https://github.com/user-attachments/assets/c3ab142d-79d1-44cc-bcdd-900eec1f3dbb)
 
+# Steps included
+
+## 1. Getting the dataset
+
+
 
 
 
