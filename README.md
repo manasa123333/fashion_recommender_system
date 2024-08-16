@@ -16,7 +16,7 @@ Used Fashion Product Images Dataset by Param Aggarwal
 [Dataset Link](https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-dataset)
 
 # How does this work
-
+![fashion drawio](https://github.com/user-attachments/assets/c3ab142d-79d1-44cc-bcdd-900eec1f3dbb)
 
 
 
